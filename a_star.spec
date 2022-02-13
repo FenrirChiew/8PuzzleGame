@@ -4,7 +4,7 @@
 block_cipher = None
 
 
-a = Analysis(['C:\\Users\\chiew\\PycharmProjects\\8PuzzleGame\\a_star.py'],
+a = Analysis(['a_star.py'],
              pathex=[],
              binaries=[],
              datas=[],
@@ -37,4 +37,4 @@ exe = EXE(pyz,
           disable_windowed_traceback=False,
           target_arch=None,
           codesign_identity=None,
-          entitlements_file=None , icon='C:\\Users\\chiew\\PycharmProjects\\8PuzzleGame\\image\\a_star.ico')
+          entitlements_file=None , icon='image\\a_star.ico')
