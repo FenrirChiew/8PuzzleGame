@@ -22,6 +22,11 @@ class State:
         self.g_state = [[0, 1, 2], [3, 4, 5], [6, 7, 8]]
 
     def initial_state(self, set_num):
+        """
+        Initialize the Initial State of the puzzle set using a user input Puzzle Set Number.
+        :param set_num: Integer value that represent the Puzzle Set Number.
+        :return: None.
+        """
         # initial state
         state_sheet = [[[8, 2, 1], [3, 7, 4], [6, 0, 5]],
                        [[6, 5, 0], [4, 8, 1], [2, 3, 7]],
