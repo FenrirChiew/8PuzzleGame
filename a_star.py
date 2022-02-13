@@ -212,7 +212,7 @@ class PuzzleSet:
         print("Solution Path:")
         self.solution_path(child)
 
-        print("\n---------------------------")
+        print("\n---------------------------\n")
         for node in self.path:
             print("           " + str(node.action).upper())
             node.draw()
@@ -237,6 +237,8 @@ class PuzzleSet:
         self.init_node.draw()
         print("Goal State:\n")
         self.goal_node.draw()
+
+        print("Searching will start soon. It might take some time for finding the solution.\n")
 
         iterations = 1
         start_time = time.time()

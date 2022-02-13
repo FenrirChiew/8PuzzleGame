@@ -96,13 +96,6 @@ class Puzzle:
         timeUsed = time.time() - self.start_time
         memoryUsed = psutil.Process().memory_info().rss - self.start_memory
 
-        # Output print the initial state
-        print("\nInitial State:")
-        self.dispalyState(self.initState)
-        # Output print the goal state
-        print("Goal State:")
-        self.dispalyState(self.goalState)
-
         print("Breadth First Search Success To Find A Solution!\n")
         solutions = [childNode]
         while solutions[0].parent is not None:
@@ -137,6 +130,15 @@ class Puzzle:
         self.frontier = [currentNode]
         self.start_time = time.time()
         self.start_memory = psutil.Process().memory_info().rss
+
+        # Output print the initial state
+        print("\nInitial State:")
+        self.dispalyState(self.initState)
+        # Output print the goal state
+        print("Goal State:")
+        self.dispalyState(self.goalState)
+
+        print("Searching will start soon. It might take some time for finding the solution.\n")
 
         while True:
             # If the frontier is empty means no solutions found
