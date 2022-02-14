@@ -267,27 +267,12 @@ class PuzzleSet:
             iterations += 1
 
 
-if __name__ == '__main__':
-    while True:
-        print("----- INPUT PUZZLE SET -----\n")
+def astar(i_state, g_state):
+    print("\n----- TEST CASE START -----\n")
 
-        set_number = int(input("Enter 0 ~ 9 for different puzzle sets (-1 to exit): "))
-        if set_number == -1:
-            print("\n\tSearch terminated. Play again next time.\n")
-            break
-        elif set_number not in range(10):
-            print("\n\tInvalid puzzle set! Please try again.\n")
-        else:
-            print("\n----- TEST CASE START -----\n")
-
-            # TESTING: PUZZLE SET CREATION
-            stt = State(set_number)
-            puzzle_set = PuzzleSet(Node(stt.i_state, None, None, 0),
-                                   Node(stt.g_state, None, None, 0))
-
-            # TESTING: SEARCHING ALGORITHM
-            puzzle_set.a_star_search()
-
-            print("\n----- TEST CASE ENDED -----\n")
-
-    stop = input("Press enter to terminate the program.")
+    # TESTING: PUZZLE SET CREATION
+    puzzle_set = PuzzleSet(Node(i_state, None, None, 0),
+                           Node(g_state, None, None, 0))
+    # TESTING: SEARCHING ALGORITHM
+    puzzle_set.a_star_search()
+    print("\n----- TEST CASE ENDED -----\n")
