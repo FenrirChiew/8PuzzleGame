@@ -1,5 +1,7 @@
 # 8 Puzzle Game🧩
 
+![image](https://user-images.githubusercontent.com/86295813/153883199-0401a2ff-7f00-4686-84c6-8428dd5ad8d7.png)
+
 This program is using 2 different searching algorithms to perform auto-searching for 10 differents pre-defined puzzle sets until it found the goal state.
 
 Python Language is used for programming.
