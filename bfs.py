@@ -45,7 +45,7 @@ class Puzzle:
         if x != 0:
             actions.append('Up')
         # Action: 'down'
-        if x != len(currentNode.state) - 1:  # is it need change to self.size - 1
+        if x != len(currentNode.state) - 1:
             actions.append('Down')
         # Action: 'left'
         if y != 0:
