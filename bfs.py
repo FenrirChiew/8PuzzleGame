@@ -34,25 +34,25 @@ class Puzzle:
         self.frontier = []
         self.start_time = None
         self.start_memory = None
-        self.iterationsUsed = 0
+        self.iterationsUsed = 1
 
     # Undergo the possible actions (Up, down, Left, Right) from a node state
     def getAction(self, currentNode):
         actions = []  # open a list to store the string list
         x, y = currentNode.search_index_by_tile(0)
 
-        # Action: 'up'
-        if x != 0:
-            actions.append('Up')
-        # Action: 'down'
-        if x != len(currentNode.state) - 1:
-            actions.append('Down')
         # Action: 'left'
         if y != 0:
             actions.append('Left')
         # Action: 'right'
         if y != len(currentNode.state) - 1:
             actions.append('Right')
+        # Action: 'up'
+        if x != 0:
+            actions.append('Up')
+        # Action: 'down'
+        if x != len(currentNode.state) - 1:
+            actions.append('Down')
 
         return actions
 
@@ -108,9 +108,9 @@ class Puzzle:
             depth += 1
 
         print(f"Total Iterations    : {self.iterationsUsed}")
-        print(f"Total Layers        : {depth}")
+        print(f"Total Steps        : {depth - 1}")
         print(f"Total Time used     : {timeUsed} seconds")
-        print(f"Total storage used  : {memoryUsed}\n")
+        print(f"Total Storage used  : {memoryUsed}\n")
 
         return True
 
